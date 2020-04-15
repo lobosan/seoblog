@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { signup } from '../../actions/auth';
 
 const SignupComponent = () => {
   const [values, setValues] = useState({
@@ -15,12 +16,38 @@ const SignupComponent = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.table({ name, email, password, error, loading, message, showForm });
+
+    setValues({ ...values, loading: true, error: false });
+    const user = { name, email, password };
+
+    signup(user).then(data => {
+      if (data.error) {
+        setValues({ ...values, error: data.error, loading: false });
+      } else {
+        setValues({
+          ...values,
+          name: '',
+          email: '',
+          password: '',
+          error: '',
+          loading: false,
+          message: data.message,
+          showForm: false
+        });
+      }
+    });
   };
 
   const handleChange = input => event => {
     setValues({ ...values, error: false, [input]: event.target.value });
   };
+
+  const showLoading = () =>
+    loading ? <div className="alert alert-info">Loading...</div> : '';
+  const showError = () =>
+    error ? <div className="alert alert-danger">{error}</div> : '';
+  const showMessage = () =>
+    message ? <div className="alert alert-info">{message}</div> : '';
 
   const signupForm = () => {
     return (
@@ -59,7 +86,14 @@ const SignupComponent = () => {
     );
   };
 
-  return <React.Fragment>{signupForm()}</React.Fragment>;
+  return (
+    <React.Fragment>
+      {showError()}
+      {showLoading()}
+      {showMessage()}
+      {showForm && signupForm()}
+    </React.Fragment>
+  );
 };
 
 export default SignupComponent;
