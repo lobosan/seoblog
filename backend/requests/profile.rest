@@ -1,0 +1,3 @@
+GET http://localhost:8000/api/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODY5OTUyMDEsImV4cCI6MTU4NzA4MTYwMX0.hNlA5wRjRv8FDCiOEbFr-9Nk_Fh2wH1gPDyOizJXwMM

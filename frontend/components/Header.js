@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
-import { APP_NAME } from '../config';
-import { signout, isAuth } from '../actions/auth';
+import { useState } from 'react';
 import {
   Collapse,
+  Nav,
   Navbar,
   NavbarToggler,
-  Nav,
   NavItem,
   NavLink
 } from 'reactstrap';
+import { isAuth, signout } from '../actions/auth';
+import { APP_NAME } from '../config';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
