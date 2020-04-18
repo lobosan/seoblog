@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODcyNTAyODgsImV4cCI6MTU4NzMzNjY4OH0.uVZBHP4REqRNgXhOS3x7TlfEKlheu2CaKofP4r0Ublg
+
+{
+	"name": "catone"
+}
