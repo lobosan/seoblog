@@ -1,15 +1,22 @@
-POST http://localhost:8000/api/category
+POST http://localhost:8000/api/tag
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODcyNTAyODgsImV4cCI6MTU4NzMzNjY4OH0.uVZBHP4REqRNgXhOS3x7TlfEKlheu2CaKofP4r0Ublg
 
 {
-	"name": "cat three"
+	"name": "tag one"
 }
 
-GET http://localhost:8000/api/category/cat-three
+
+GET http://localhost:8000/api/tag/tag-one
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODcyNTAyODgsImV4cCI6MTU4NzMzNjY4OH0.uVZBHP4REqRNgXhOS3x7TlfEKlheu2CaKofP4r0Ublg
 
-DELETE http://localhost:8000/api/category/cat-three
+
+DELETE http://localhost:8000/api/tag/tag-one
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODcyNTAyODgsImV4cCI6MTU4NzMzNjY4OH0.uVZBHP4REqRNgXhOS3x7TlfEKlheu2CaKofP4r0Ublg
+
+
+GET http://localhost:8000/api/tags
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk3OWZmYmQ1OTBmMDQ2ZmQ3ZmEzYjUiLCJpYXQiOjE1ODcyNTAyODgsImV4cCI6MTU4NzMzNjY4OH0.uVZBHP4REqRNgXhOS3x7TlfEKlheu2CaKofP4r0Ublg
